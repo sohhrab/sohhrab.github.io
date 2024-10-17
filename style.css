@@ -7,29 +7,48 @@ body {
     color: #333;
 }
 
-/* Header Navigation */
-header {
+/* Fixed Navigation Bar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
     background-color: #333;
     padding: 10px 0;
+    z-index: 1000;
 }
 
-header nav ul {
+.navbar .container {
     display: flex;
-    justify-content: center;
-    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header nav ul li {
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
     margin: 0 15px;
 }
 
-header nav ul li a {
+.navbar .nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-header nav ul li a:hover {
+.navbar .nav-links li a:hover, 
+.navbar .nav-links li a.active {
     text-decoration: underline;
 }
 
@@ -39,6 +58,7 @@ header nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 100px 20px;
+    margin-top: 60px; /* Adjust for fixed nav */
 }
 
 .hero h1 {
@@ -79,4 +99,28 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .about h2 {
+        font-size: 2em;
+    }
+
+    .about p {
+        font-size: 1em;
+    }
 }
