@@ -92,6 +92,76 @@ body {
     margin-bottom: 20px;
 }
 
+/* Small Hero Section Styling */
+.hero-small {
+    height: 50vh;
+    background: url('path/to/your/background-image.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    margin-top: 70px; /* Account for fixed navbar */
+}
+
+.hero-small::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-small .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Project and Research Cards Styling */
+.project-card, .research-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.project-card h3, .research-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #24292e;
+}
+
+.project-card p, .research-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Resources List Styling */
+.resource-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin-bottom: 15px;
+}
+
+.resource-list li a {
+    color: #0073e6;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resource-list li a:hover {
+    color: #005bb5;
+}
+
+
 /* About Section Styling */
 .about {
     padding: 80px 20px;
