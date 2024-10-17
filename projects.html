@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Sohrab Farooq</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Header -->
+    <!-- Navigation -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Sohrab Farooq</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-small">
+        <div class="hero-content">
+            <h1>Projects</h1>
+            <p>Discover the key projects I've worked on, ranging from cybersecurity implementations to AI-driven solutions.</p>
+        </div>
+    </section>
 
     <!-- Projects Section -->
     <section class="projects">
         <div class="container">
-            <h2>My Projects</h2>
-            <ul>
-                <li><strong>Cybersecurity Framework Implementation</strong> - Implemented a robust cybersecurity framework for a large financial institution, reducing incidents by 30%.</li>
-                <li><strong>AI-Powered Threat Detection</strong> - Developed a machine learning algorithm for identifying and responding to cybersecurity threats in real-time.</li>
-                <li><strong>Network Security Audit</strong> - Led a comprehensive audit and remediation of a company's network infrastructure, enhancing security by 45%.</li>
-            </ul>
+            <h2>Highlighted Projects</h2>
+            <div class="project-card">
+                <h3>Cybersecurity Framework Implementation</h3>
+                <p>Implemented a comprehensive cybersecurity framework for a financial institution, reducing incidents by 30%.</p>
+            </div>
+            <div class="project-card">
+                <h3>AI-Powered Threat Detection</h3>
+                <p>Developed a machine learning model to detect and prevent cyber threats in real-time, enhancing network resilience.</p>
+            </div>
+            <div class="project-card">
+                <h3>Network Security Audit</h3>
+                <p>Conducted a thorough network audit for a large corporation, resulting in a 45% improvement in security posture.</p>
+            </div>
         </div>
     </section>
 
@@ -43,4 +66,5 @@
     </footer>
 
 </body>
+
 </html>
