@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | Sohrab Farooq</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Header -->
+    <!-- Navigation -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Sohrab Farooq</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-small">
+        <div class="hero-content">
+            <h1>Resources</h1>
+            <p>Access downloadable resources related to cybersecurity, AI, and IT leadership.</p>
+        </div>
+    </section>
 
     <!-- Resources Section -->
     <section class="resources">
         <div class="container">
-            <h2>Resources</h2>
-            <ul>
+            <h2>Downloadable Resources</h2>
+            <ul class="resource-list">
                 <li><a href="path/to/resource1.pdf" target="_blank">Cybersecurity Best Practices Guide</a></li>
                 <li><a href="path/to/resource2.pdf" target="_blank">AI Threat Detection White Paper</a></li>
+                <li><a href="path/to/resource3.pdf" target="_blank">Zero Trust Architecture Framework</a></li>
             </ul>
         </div>
     </section>
@@ -42,4 +59,5 @@
     </footer>
 
 </body>
+
 </html>
