@@ -6,12 +6,20 @@ body {
     background-color: #f5f7fa;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container */
+.container {
+    max-width: 1200px; /* Sets the maximum width for the content */
+    margin: 0 auto;    /* Center aligns all content */
+    padding: 0 20px;   /* Adds padding for better spacing on mobile */
 }
 
 /* Navbar Styling */
 .navbar {
     background-color: #1c1c1c;
-    padding: 20px;
+    padding: 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -37,6 +45,7 @@ body {
     list-style: none;
     display: flex;
     margin: 0;
+    padding: 0;
 }
 
 .navbar .nav-links li {
@@ -57,7 +66,7 @@ body {
 
 /* Hero Section Styling */
 .hero {
-    height: 90vh;
+    height: 85vh;
     background: url('path/to/your/hero-background-image.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -76,7 +85,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
 }
 
 .hero .hero-content {
@@ -85,7 +94,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
 }
@@ -112,14 +121,12 @@ body {
 
 /* About Section Styling */
 .about {
-    padding: 80px 20px;
+    padding: 60px 20px;
     background-color: #ffffff;
-    text-align: center;
 }
 
 .about .container {
-    max-width: 900px;
-    margin: auto;
+    text-align: center;
 }
 
 .about h2 {
@@ -132,6 +139,8 @@ body {
     font-size: 1.2em;
     line-height: 1.8;
     color: #555;
+    max-width: 900px; /* Constrain width to improve readability */
+    margin: 0 auto;   /* Center aligns text block */
 }
 
 /* Featured Projects Section */
@@ -141,13 +150,11 @@ body {
 }
 
 .featured-projects .container {
-    max-width: 1100px;
-    margin: auto;
+    text-align: center;
 }
 
 .featured-projects h2 {
     font-size: 2.5em;
-    text-align: center;
     margin-bottom: 40px;
     color: #24292e;
 }
@@ -156,7 +163,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .card {
@@ -191,7 +198,11 @@ footer {
     color: #ffffff;
     padding: 40px 20px;
     text-align: center;
-    margin-top: 40px;
+}
+
+footer .container {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 footer a {
@@ -232,5 +243,23 @@ footer a:hover {
 
     .navbar .nav-links.active {
         display: flex;
+    }
+
+    .navbar .toggle {
+        display: block;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .about h2 {
+        font-size: 2em;
+    }
+
+    .about p {
+        font-size: 1em;
     }
 }
