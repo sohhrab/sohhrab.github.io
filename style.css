@@ -3,20 +3,20 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #f5f7fa;
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #24292e;
-    padding: 15px 20px;
+    background-color: #1c1c1c;
+    padding: 20px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
@@ -27,9 +27,10 @@ body {
 
 .navbar .logo {
     color: #ffffff;
-    font-size: 24px;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .navbar .nav-links {
@@ -39,7 +40,7 @@ body {
 }
 
 .navbar .nav-links li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .navbar .nav-links li a {
@@ -57,7 +58,7 @@ body {
 /* Hero Section Styling */
 .hero {
     height: 90vh;
-    background: url('path/to/your/background-image.jpg') center/cover no-repeat;
+    background: url('path/to/your/hero-background-image.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,6 +66,7 @@ body {
     color: #ffffff;
     position: relative;
     margin-top: 70px; /* Account for fixed navbar */
+    padding: 0 20px;
 }
 
 .hero::after {
@@ -74,7 +76,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .hero .hero-content {
@@ -84,94 +86,40 @@ body {
 
 .hero h1 {
     font-size: 4em;
-    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.5em;
+    font-weight: 300;
     margin-bottom: 20px;
 }
 
-/* Small Hero Section Styling */
-.hero-small {
-    height: 50vh;
-    background: url('path/to/your/background-image.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #ffffff;
-    position: relative;
-    margin-top: 70px; /* Account for fixed navbar */
-}
-
-.hero-small::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-small .hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-/* Project and Research Cards Styling */
-.project-card, .research-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.project-card h3, .research-card h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #24292e;
-}
-
-.project-card p, .research-card p {
-    font-size: 1em;
-    color: #555;
-}
-
-/* Resources List Styling */
-.resource-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.resource-list li {
-    margin-bottom: 15px;
-}
-
-.resource-list li a {
-    color: #0073e6;
-    font-weight: 600;
+.btn-primary {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #333;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.resource-list li a:hover {
-    color: #005bb5;
+.btn-primary:hover {
+    background-color: #e6b800;
 }
-
 
 /* About Section Styling */
 .about {
     padding: 80px 20px;
     background-color: #ffffff;
+    text-align: center;
 }
 
 .about .container {
     max-width: 900px;
     margin: auto;
-    text-align: center;
 }
 
 .about h2 {
@@ -186,19 +134,71 @@ body {
     color: #555;
 }
 
+/* Featured Projects Section */
+.featured-projects {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+}
+
+.featured-projects .container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.featured-projects h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #24292e;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #24292e;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
 /* Footer Styling */
 footer {
-    background-color: #24292e;
+    background-color: #1c1c1c;
     color: #ffffff;
-    padding: 20px 0;
+    padding: 40px 20px;
     text-align: center;
-    position: relative;
+    margin-top: 40px;
 }
 
 footer a {
     color: #ffcc00;
     text-decoration: none;
     margin: 0 10px;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -207,12 +207,22 @@ footer a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .navbar .nav-links {
+@media (max-width: 1024px) {
+    .grid {
         flex-direction: column;
         align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .navbar .nav-links {
         display: none;
-        background-color: #24292e;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1c1c1c;
         position: absolute;
         top: 60px;
         right: 0;
@@ -220,29 +230,7 @@ footer a:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .navbar .nav-links li {
-        margin: 10px 0;
-    }
-
     .navbar .nav-links.active {
         display: flex;
-    }
-
-    .navbar .toggle {
-        display: block;
-        cursor: pointer;
-        color: #ffffff;
-    }
-
-    .hero h1 {
-        font-size: 2.5em;
-    }
-
-    .about h2 {
-        font-size: 2em;
-    }
-
-    .about p {
-        font-size: 1em;
     }
 }
