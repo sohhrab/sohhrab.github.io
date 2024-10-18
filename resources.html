@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Header Section with Navigation -->
     <header>
         <nav class="navbar">
             <div class="container">
                 <a href="index.html" class="logo">Sohrab Farooq</a>
+                <button class="toggle" aria-label="Toggle navigation">&#9776;</button>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -30,33 +31,51 @@
 
     <!-- Hero Section -->
     <section class="hero hero-small">
-        <div class="hero-content">
-            <h1>Resources</h1>
-            <p>Access downloadable resources related to cybersecurity, AI, and IT leadership.</p>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Resources</h1>
+                <p>Access downloadable resources related to cybersecurity, AI, and IT leadership.</p>
+            </div>
         </div>
     </section>
 
     <!-- Resources Section -->
-    <section class="resources">
-        <div class="container">
-            <h2>Downloadable Resources</h2>
-            <ul class="resource-list">
-                <li><a href="path/to/resource1.pdf" target="_blank">Cybersecurity Best Practices Guide</a></li>
-                <li><a href="path/to/resource2.pdf" target="_blank">AI Threat Detection White Paper</a></li>
-                <li><a href="path/to/resource3.pdf" target="_blank">Zero Trust Architecture Framework</a></li>
-            </ul>
-        </div>
-    </section>
+    <main>
+        <section class="resources">
+            <div class="container">
+                <h2>Downloadable Resources</h2>
+                <ul class="resource-list">
+                    <li><a href="path/to/resource1.pdf" target="_blank">Cybersecurity Best Practices Guide</a></li>
+                    <li><a href="path/to/resource2.pdf" target="_blank">AI Threat Detection White Paper</a></li>
+                    <li><a href="path/to/resource3.pdf" target="_blank">Zero Trust Architecture Framework</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Sohrab Farooq | Follow me on 
-                <a href="https://www.linkedin.com/in/sohrabfarooq/">LinkedIn</a> | 
-                <a href="https://twitter.com/yourusername">Twitter</a>
-            </p>
+            <div class="footer-content">
+                <p>&copy; 2024 Sohrab Farooq | Follow me on 
+                    <a href="https://www.linkedin.com/in/sohrabfarooq/">LinkedIn</a> | 
+                    <a href="https://twitter.com/yourusername">Twitter</a>
+                </p>
+            </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Mobile Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('.toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            toggleButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 
