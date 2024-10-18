@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Header Section with Navigation -->
     <header>
         <nav class="navbar">
             <div class="container">
                 <a href="index.html" class="logo">Sohrab Farooq</a>
+                <button class="toggle" aria-label="Toggle navigation">&#9776;</button>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -30,40 +31,60 @@
 
     <!-- Hero Section -->
     <section class="hero hero-small">
-        <div class="hero-content">
-            <h1>Research</h1>
-            <p>Explore my research focused on cybersecurity, artificial intelligence, and network resilience.</p>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Research</h1>
+                <p>Explore my research focused on cybersecurity, artificial intelligence, and network resilience.</p>
+            </div>
         </div>
     </section>
 
     <!-- Research Section -->
-    <section class="research">
-        <div class="container">
-            <h2>Research Topics</h2>
-            <div class="research-card">
-                <h3>AI in Cybersecurity</h3>
-                <p>Investigating the potential of artificial intelligence to enhance the detection and prevention of cyber threats.</p>
+    <main>
+        <section class="research">
+            <div class="container">
+                <h2>Research Topics</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>AI in Cybersecurity</h3>
+                        <p>Investigating the potential of artificial intelligence to enhance the detection and prevention of cyber threats.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Network Resiliency</h3>
+                        <p>Researching methods to build resilient networks capable of withstanding sophisticated attacks.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Zero Trust Architecture</h3>
+                        <p>Developing a framework for implementing zero trust principles in enterprise networks for maximum security.</p>
+                    </article>
+                </div>
             </div>
-            <div class="research-card">
-                <h3>Network Resiliency</h3>
-                <p>Researching methods to build resilient networks capable of withstanding sophisticated attacks.</p>
-            </div>
-            <div class="research-card">
-                <h3>Zero Trust Architecture</h3>
-                <p>Developing a framework for implementing zero trust principles in enterprise networks for maximum security.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Sohrab Farooq | Follow me on 
-                <a href="https://www.linkedin.com/in/sohrabfarooq/">LinkedIn</a> | 
-                <a href="https://twitter.com/yourusername">Twitter</a>
-            </p>
+            <div class="footer-content">
+                <p>&copy; 2024 Sohrab Farooq | Follow me on 
+                    <a href="https://www.linkedin.com/in/sohrabfarooq/">LinkedIn</a> | 
+                    <a href="https://twitter.com/yourusername">Twitter</a>
+                </p>
+            </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Mobile Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('.toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            toggleButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 
